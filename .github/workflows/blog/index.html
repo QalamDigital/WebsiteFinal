@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qalam Digital Blog | Marketing, SEO, Design and Growth</title>
+<meta name="description" content="Editorial guides on digital marketing, SEO, AEO, GEO, branding, UI UX, landing pages, paid ads and creative growth from Qalam Digital.">
+<meta name="author" content="Qalam Digital">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://www.qalamdigital.com/blog/index.html">
+<link rel="icon" href="../assets/images/qalam-icon.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Qalam Digital">
+<meta property="og:title" content="Qalam Digital Blog | Marketing, SEO, Design and Growth">
+<meta property="og:description" content="Editorial guides on digital marketing, SEO, AEO, GEO, branding, UI UX, landing pages, paid ads and creative growth from Qalam Digital.">
+<meta property="og:url" content="https://www.qalamdigital.com/blog/index.html">
+<meta property="og:image" content="https://www.qalamdigital.com/assets/images/qalam-og-image.png">
+<meta property="og:image:alt" content="Qalam Digital Blog | Marketing, SEO, Design and Growth">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Qalam Digital Blog | Marketing, SEO, Design and Growth">
+<meta name="twitter:description" content="Editorial guides on digital marketing, SEO, AEO, GEO, branding, UI UX, landing pages, paid ads and creative growth from Qalam Digital.">
+<meta name="twitter:image" content="https://www.qalamdigital.com/assets/images/qalam-og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  /* Premium Filter & Search Styling */
+  .filter-search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding: 20px 24px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .filter-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text2);
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .filter-btn:hover {
+    color: var(--text);
+    border-color: var(--green);
+    transform: translateY(-1px);
+  }
+  
+  .filter-btn.active {
+    color: #07140D;
+    background: var(--green);
+    border-color: var(--green);
+    box-shadow: 0 8px 20px rgba(61,214,140,0.22);
+  }
+  
+  .search-wrapper {
+    position: relative;
+    min-width: 300px;
+    max-width: 100%;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px 16px 10px 42px;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    border-radius: 999px;
+    outline: none;
+    transition: all 0.2s;
+  }
+  
+  .search-input:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(61,214,140,0.15);
+    background: var(--bg3);
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text2);
+    pointer-events: none;
+  }
+  
+  /* Layout Grid Adjustments */
+  .blog-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 1120px) {
+    .blog-card-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .blog-card-grid {
+      grid-template-columns: 1fr;
+    }
+    .filter-search-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .search-wrapper {
+      width: 100%;
+    }
+  }
+  
+  /* Integrated CTA Card */
+  .blog-cta-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--green-dim) 0%, rgba(8,145,178,0.08) 100%);
+    border: 1px solid rgba(61,214,140,0.22);
+    box-shadow: 0 10px 30px rgba(61,214,140,0.04);
+    grid-column: span 1;
+    min-height: 100%;
+    box-sizing: border-box;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .blog-cta-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(61,214,140,0.45);
+  }
+  
+  .blog-cta-content h3 {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  
+  .blog-cta-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text2);
+    margin-bottom: 28px;
+  }
+  
+  .blog-cta-card .btn-primary {
+    width: 100%;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(61,214,140,0.15);
+  }
+  
+  /* Filter classes */
+  .blog-card {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .blog-card.is-filtered-out {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    overflow: hidden;
+  }
+  
+  /* No results state */
+  .no-results {
+    display: none;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--bg3);
+    border: 1px dashed var(--border);
+    border-radius: 16px;
+    box-shadow: inset 0 4px 20px rgba(0,0,0,0.01);
+  }
+  
+  .no-results.visible {
+    display: block;
+  }
+  
+  .no-results h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  
+  .no-results p {
+    color: var(--text2);
+    margin-bottom: 24px;
+    font-size: 15px;
+  }
+  
+  .no-results .btn-secondary {
+    display: inline-flex;
+    padding: 10px 22px;
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://www.qalamdigital.com/blog/index.html#blog",
+      "name": "Qalam Digital Blog | Marketing, SEO, Design and Growth",
+      "description": "Editorial guides on digital marketing, SEO, AEO, GEO, branding, UI UX, landing pages, paid ads and creative growth from Qalam Digital.",
+      "url": "https://www.qalamdigital.com/blog/index.html",
+      "publisher": {
+        "@id": "https://www.qalamdigital.com/#organization"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.qalamdigital.com/blog/index.html#posts",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.qalamdigital.com/blog/ai-digital-marketing-erode-businesses/index.html",
+          "name": "How AI Digital Marketing Helps Erode Businesses Grow Faster"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.qalamdigital.com/blog/landing-page-design-conversion-checklist/index.html",
+          "name": "Landing Page Design Checklist for Better Conversions"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.qalamdigital.com/blog/meta-ads-creative-testing-framework/index.html",
+          "name": "A Simple Meta Ads Creative Testing Framework"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.qalamdigital.com/blog/seo-aeo-geo-difference-businesses/index.html",
+          "name": "SEO, AEO and GEO: What Businesses Need to Know"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.qalamdigital.com/blog/brand-identity-before-social-media/index.html",
+          "name": "Why Brand Identity Should Come Before Social Media Growth"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://www.qalamdigital.com/blog/ui-ux-for-service-business-websites/index.html",
+          "name": "UI UX Principles for Service Business Websites"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://www.qalamdigital.com/blog/google-ads-landing-page-alignment/index.html",
+          "name": "How to Align Google Ads With Your Landing Page"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://www.qalamdigital.com/blog/social-media-content-calendar-system/index.html",
+          "name": "A Practical Social Media Content Calendar System"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://www.qalamdigital.com/blog/website-seo-foundation-for-new-business/index.html",
+          "name": "Website SEO Foundations for a New Business"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://www.qalamdigital.com/blog/creative-brief-for-design-projects/index.html",
+          "name": "How to Write a Useful Creative Brief for Design Projects"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "url": "https://www.qalamdigital.com/blog/print-design-still-matters-local-brands/index.html",
+          "name": "Why Print Design Still Matters for Local Brands"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "url": "https://www.qalamdigital.com/blog/marketing-audit-before-campaigns/index.html",
+          "name": "Why You Need a Marketing Audit Before New Campaigns"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.qalamdigital.com/blog/index.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.qalamdigital.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.qalamdigital.com/blog/index.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-index-page">
+
+<nav id="navbar">
+  <div class="nav-logo">
+    <a href="../index.html">
+      <img class="logo-dark" src="../assets/images/qalam-logo-dark.svg" alt="Qalam Digital" height="26">
+      <img class="logo-light" src="../assets/images/qalam-logo-white.svg" alt="Qalam Digital" height="26">
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../portfolio.html">Portfolio</a></li>
+    <li><a href="../blog/index.html" aria-current="page">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-mobile-controls">
+    <button class="theme-toggle" id="theme-toggle-mobile" aria-label="Toggle theme">
+      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
+      <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-right">
+    <a href="https://wa.me/919361104499?text=Hi%20Qalam%20Digital%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener" class="btn-secondary" style="padding:10px 20px;font-size:13px;"><svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.478.669 4.797 1.833 6.788L2 30l7.397-1.812A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.6a11.547 11.547 0 01-5.89-1.608l-.422-.252-4.39 1.075 1.112-4.278-.276-.44A11.556 11.556 0 014.4 16C4.4 9.59 9.59 4.4 16 4.4S27.6 9.59 27.6 16 22.41 27.6 16 27.6zm6.39-8.672c-.35-.175-2.07-1.02-2.39-1.137-.322-.116-.556-.175-.79.175-.233.35-.905 1.137-1.11 1.371-.204.233-.408.262-.758.087-.35-.175-1.478-.545-2.815-1.737-1.04-.928-1.742-2.073-1.946-2.423-.204-.35-.022-.539.153-.713.158-.157.35-.408.525-.612.175-.204.233-.35.35-.583.117-.234.058-.438-.029-.612-.088-.175-.79-1.904-1.082-2.608-.285-.686-.574-.593-.79-.604l-.672-.012c-.234 0-.612.088-.933.438-.32.35-1.224 1.196-1.224 2.917s1.253 3.383 1.428 3.616c.175.234 2.466 3.766 5.977 5.278.835.36 1.487.575 1.995.736.838.267 1.601.229 2.204.139.672-.1 2.07-.847 2.362-1.664.292-.817.292-1.518.204-1.664-.087-.146-.32-.234-.67-.409z"/></svg>Chat on WhatsApp</a>
+    <button class="btn-primary" onclick="openPopup()">Get Free Marketing Audit</button>
+    <button class="theme-toggle" id="theme-toggle-desktop" aria-label="Toggle theme">
+      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
+      <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div id="mobile-nav">
+  <ul class="mobile-nav-links">
+    <li><a href="../index.html" onclick="closeMenu()">Home</a></li>
+    <li><a href="../index.html#services" onclick="closeMenu()">Services</a></li>
+    <li><a href="../portfolio.html" onclick="closeMenu()">Portfolio</a></li>
+    <li><a href="../blog/index.html" onclick="closeMenu()">Blog</a></li>
+    <li><a href="../about.html" onclick="closeMenu()">About</a></li>
+    <li><a href="../contact.html" onclick="closeMenu()">Contact</a></li>
+  </ul>
+  <div class="mobile-nav-actions">
+    <a href="https://wa.me/919361104499?text=Hi%20Qalam%20Digital%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener" class="btn-secondary" style="justify-content:center;"><svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.478.669 4.797 1.833 6.788L2 30l7.397-1.812A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.6a11.547 11.547 0 01-5.89-1.608l-.422-.252-4.39 1.075 1.112-4.278-.276-.44A11.556 11.556 0 014.4 16C4.4 9.59 9.59 4.4 16 4.4S27.6 9.59 27.6 16 22.41 27.6 16 27.6zm6.39-8.672c-.35-.175-2.07-1.02-2.39-1.137-.322-.116-.556-.175-.79.175-.233.35-.905 1.137-1.11 1.371-.204.233-.408.262-.758.087-.35-.175-1.478-.545-2.815-1.737-1.04-.928-1.742-2.073-1.946-2.423-.204-.35-.022-.539.153-.713.158-.157.35-.408.525-.612.175-.204.233-.35.35-.583.117-.234.058-.438-.029-.612-.088-.175-.79-1.904-1.082-2.608-.285-.686-.574-.593-.79-.604l-.672-.012c-.234 0-.612.088-.933.438-.32.35-1.224 1.196-1.224 2.917s1.253 3.383 1.428 3.616c.175.234 2.466 3.766 5.977 5.278.835.36 1.487.575 1.995.736.838.267 1.601.229 2.204.139.672-.1 2.07-.847 2.362-1.664.292-.817.292-1.518.204-1.664-.087-.146-.32-.234-.67-.409z"/></svg>Chat on WhatsApp</a>
+    <button class="btn-primary" onclick="closeMenu();openPopup();" style="justify-content:center;">Get Free Marketing Audit</button>
+  </div>
+</div>
+<div id="mobile-overlay" onclick="closeMenu()"></div>
+
+<main>
+  <section class="blog-landing-hero">
+    <div class="container blog-hero-grid">
+      <div>
+        <div class="section-label">Qalam Journal</div>
+        <h1>Ideas for sharper marketing, cleaner design and smarter growth.</h1>
+        <p>Editorial notes, tactical guides and strategy breakdowns for founders, local businesses and growing brands.</p>
+      </div>
+      <a class="blog-hero-feature" href="../blog/ai-digital-marketing-erode-businesses/index.html">
+        <img src="../assets/images/blog/ai-digital-marketing-erode-businesses.svg" alt="AI digital marketing planning board for Erode businesses">
+        <span>Digital Growth</span>
+        <strong>How AI Digital Marketing Helps Erode Businesses Grow Faster</strong>
+        <small>By Mahatheer Muhammadh &middot; 3 min read</small>
+      </a>
+    </div>
+  </section>
+
+  <section class="blog-list-section">
+    <div class="container">
+      <div class="blog-list-header">
+        <div>
+          <div class="section-label">Latest Articles</div>
+          <h2>Fresh thinking from Qalam Digital</h2>
+        </div>
+      </div>
+
+      <!-- Filter and Search controls -->
+      <div class="filter-search-container">
+        <div class="category-filters" role="tablist" aria-label="Blog category filters">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Articles</button>
+          <button class="filter-btn" data-filter="digital-growth" role="tab" aria-selected="false">Digital Growth</button>
+          <button class="filter-btn" data-filter="meta-ads" role="tab" aria-selected="false">Meta Ads</button>
+          <button class="filter-btn" data-filter="seo" role="tab" aria-selected="false">SEO</button>
+          <button class="filter-btn" data-filter="landing-pages" role="tab" aria-selected="false">Landing Pages</button>
+          <button class="filter-btn" data-filter="ui-ux" role="tab" aria-selected="false">UI UX</button>
+          <button class="filter-btn" data-filter="branding" role="tab" aria-selected="false">Branding</button>
+          <button class="filter-btn" data-filter="social-media" role="tab" aria-selected="false">Social Media</button>
+          <button class="filter-btn" data-filter="google-ads" role="tab" aria-selected="false">Google Ads</button>
+          <button class="filter-btn" data-filter="print-design" role="tab" aria-selected="false">Print</button>
+          <button class="filter-btn" data-filter="design-process" role="tab" aria-selected="false">Design Process</button>
+          <button class="filter-btn" data-filter="strategy" role="tab" aria-selected="false">Strategy</button>
+        </div>
+        <div class="search-wrapper">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" class="search-input" id="blog-search" placeholder="Search articles..." aria-label="Search articles">
+        </div>
+      </div>
+
+      <!-- Unified Grid for all 12 Articles + Embedded Audit CTA -->
+      <div class="blog-card-grid" id="blog-grid">
+        
+        <!-- Post 1 -->
+        <article class="blog-card" data-category="digital-growth">
+          <a href="../blog/ai-digital-marketing-erode-businesses/index.html" class="blog-card-image">
+            <img src="../assets/images/blog/ai-digital-marketing-erode-businesses.svg" alt="AI digital marketing planning board for Erode businesses">
+          </a>
+          <div class="blog-card-body">
+            <span class="blog-category">Digital Growth</span>
+            <h3><a href="../blog/ai-digital-marketing-erode-businesses/index.html">How AI Digital Marketing Helps Erode Businesses Grow Faster</a></h3>
+            <p>A practical guide to using AI, better creative systems, and cleaner campaign planning to help local businesses turn digital attention into measurable leads.</p>
+            <div class="blog-meta">
+              <span>By Mahatheer Muhammadh</span>
+              <span>3 min read</span>
+            </div>
+            <a class="blog-read-more" href="../blog/ai-digital-marketing-erode-businesses/index.html">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="blog-card" data-category="landing-pages">
+          <a href="../blog/landing-page-design-conversion-checklist/index.html" class="blog-card-image">
+            <img src="../assets/images/blog/landing-page-design-conversion-checklist.svg" alt="Landing page wireframe with conversion checklist">
+          </a>
+          <div class="blog-card-body">
+            <span class="blog-category">Landing Pages</span>
+            <h3><a href="../blog/landing-page-design-conversion-checklist/index.html">Landing Page Design Checklist for Better Conversions</a></h3>
+            <p>Use this conversion-first checklist to plan landing pages that explain the offer clearly, reduce friction, and guide visitors toward action.</p>
+            <div class="blog-meta">
+              <span>By Mahatheer Muhammadh</span>
+              <span>2 min read</span>
+            </div>
+            <a class="blog-read-more" href="../blog/landing-page-design-conversion-checklist/index.html">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="blog-card" data-category="meta-ads">
+          <a href="../blog/meta-ads-creative-testing-framework/index.html" class="blog-card-image">
+            <img src="../assets/images/blog/meta-ads-creative-testing-framework.svg" alt="Meta Ads creative testing grid">
+          </a>
+          <div class="blog-card-body">
+            <span class="blog-category">Meta Ads</span>
+            <h3><a href="../blog/meta-ads-creative-testing-framework/index.html">A Simple Meta Ads Creative Testing Framework</a></h3>
+            <p>Learn how to test Meta Ads creatives with clearer hooks, better visual direction, and a practical rhythm for improving campaign performance.</p>
+            <div class="blog-meta">
+              <span>By Mahatheer Muhammadh</span>
+              <span>2 min read</span>
+            </div>
+            <a class="blog-read-more" href="../blog/meta-ads-creative-testing-framework/index.html">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Post 4 -->
+        <article class="blog-card" data-category="seo">
+          <a href="../blog/seo-aeo-geo-difference-businesses/index.html" class="blog-card-image">
+            <img src="../assets/images/blog/seo-aeo-geo-difference-businesses.svg" alt="SEO AEO GEO visibility map">
+          </a>
+          <div class="blog-card-body">
+            <span class="blog-category">SEO</span>
+            <h3><a href="../blog/seo-aeo-geo-difference-businesses/index.html">SEO, AEO and GEO: What Businesses Need to Know</a></h3>
+            <p>Search is changing. This guide explains the practical difference between SEO, AEO and GEO for businesses that want visibility in search and AI answers.</p>
+            <div class="blog-meta">
+              <span>By Mahatheer Muhammadh</span>
+              <span>2 min read</span>
+            </div>
+            <a class="blog-read-more" href="../blog/seo-aeo-geo-difference-businesses/index.html">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Integrated Call-to-Action Card -->
+        <div class="blog-cta-card" id="audit-cta-card">
+          <div class="blog-cta-content">
+            <span class="blog-category" style="color:var(--green)">Free Audit</span>
+            <h3>Get a Free Digital Marketing Audit</h3>
+            <p>Let our marketing experts analyze your current search rankings, Meta Ads structure, and website design to find immediate quick-wins for lead generation.</p>
+          </div>
+          <button class="btn-primary" onclick="openPopup()">Request My Free Audit</button>
+        </div>
+
+        <!-- Post 5 -->
+        <article class="blog-card" data-category="branding">
+          <a href="../blog/brand-identity-before-social-media/index.html" class="blog-card-image">
+            <img src="../assets/images/blog/brand-identity-before-social-media.svg" alt="Brand identity system before social media content">
+          </a>
+          <div class="blog-card-body">
+            <span class="blog-category">Branding</span>
+            <h3><a href="../blog/brand-identity-before-social-media/index.html">Why Brand Identity Should Come Before Social Media Growth</a></h3>
+            <p>A clear brand identity makes social media content easier to design, easier to recognize, and more trustworthy for customers.</p>
+            <div class="blog-meta">
+              <span>By Mahatheer Muhammadh</span>
+              <span>2 min read</span>
+            </div>
+            <a class="blog-read-more" href="../blog/brand-identity-before-social-media/index.html">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Post 6 -->
+        <article class="blog-card" data-category="ui-ux">
+          <a href="../blog/ui-ux-for-service-business-websites/index.html" class="blog-card-image">
+            <img src="../assets/images/blog/ui-ux-for-service-business-websites.svg" alt="UI UX layout for service business website">
+          </a>
+          <div class="blog-card-body">
+            <span class="blog-category">UI UX</span>
+            <h3><a href="../blog/ui-ux-for-service-business-websites/index.html">UI UX Principles for Service Business Websites</a></h3>
+            <p>Service websites need clarity, trust, and fast decision-making. These UI UX principles help visitors understand your offer and take action.</p>
+            <div class="blog-meta">
+              <span>By Mahatheer Muhammadh</span>
+              <span>2 min read</span>
+            </div>
+            <a class="blog-read-more" href="../blog/ui-ux-for-service-business-websites/index.html">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Post 7 -->
+        <article class="blog-card" data-category="google-ads">
+          <a href="../blog/google-ads-landing-page-alignment/index.html" class="blog-card-image">
+            <img src="../assets/images/blog/google-ads-landing-page-alignment.svg" alt="Google Ads campaign aligned with landing page">
+          </a>
+          <div class="blog-card-body">
+            <span class="blog-category">Google Ads</span>
+            <h3><a href="../blog/google-ads-landing-page-alignment/index.html">How to Align Google Ads With Your Landing Page</a></h3>
+            <p>Google Ads perform better when keywords, ad copy, landing page content, and conversion actions all point to the same promise.</p>
+            <div class="blog-meta">
+              <span>By Mahatheer Muhammadh</span>
+              <span>2 min read</span>
+            </div>
+            <a class="blog-read-more" href="../blog/google-ads-landing-page-alignment/index.html">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Post 8 -->
+        <article class="blog-card" data-category="social-media">
+          <a href="../blog/social-media-content-calendar-system/index.html" class="blog-card-image">
+            <img src="../assets/images/blog/social-media-content-calendar-system.svg" alt="Social media content calendar planning system">
+          </a>
+          <div class="blog-card-body">
+            <span class="blog-category">Social Media</span>
+            <h3><a href="../blog/social-media-content-calendar-system/index.html">A Practical Social Media Content Calendar System</a></h3>
+            <p>Plan social media with a simple weekly system that balances brand storytelling, educational content, offers, proof, and campaign support.</p>
+            <div class="blog-meta">
+              <span>By Mahatheer Muhammadh</span>
+              <span>2 min read</span>
+            </div>
+            <a class="blog-read-more" href="../blog/social-media-content-calendar-system/index.html">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Post 9 -->
+        <article class="blog-card" data-category="seo">
+          <a href="../blog/website-seo-foundation-for-new-business/index.html" class="blog-card-image">
+            <img src="../assets/images/blog/website-seo-foundation-for-new-business.svg" alt="SEO foundations for a new business website">
+          </a>
+          <div class="blog-card-body">
+            <span class="blog-category">SEO</span>
+            <h3><a href="../blog/website-seo-foundation-for-new-business/index.html">Website SEO Foundations for a New Business</a></h3>
+            <p>Before chasing advanced SEO, make sure your new business website has the foundations search engines and customers need.</p>
+            <div class="blog-meta">
+              <span>By Mahatheer Muhammadh</span>
+              <span>2 min read</span>
+            </div>
+            <a class="blog-read-more" href="../blog/website-seo-foundation-for-new-business/index.html">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Post 10 -->
+        <article class="blog-card" data-category="design-process">
+          <a href="../blog/creative-brief-for-design-projects/index.html" class="blog-card-image">
+            <img src="../assets/images/blog/creative-brief-for-design-projects.svg" alt="Creative brief document for design project">
+          </a>
+          <div class="blog-card-body">
+            <span class="blog-category">Design Process</span>
+            <h3><a href="../blog/creative-brief-for-design-projects/index.html">How to Write a Useful Creative Brief for Design Projects</a></h3>
+            <p>A strong creative brief helps designers understand the goal, audience, message, constraints, and expected outcome before design begins.</p>
+            <div class="blog-meta">
+              <span>By Mahatheer Muhammadh</span>
+              <span>2 min read</span>
+            </div>
+            <a class="blog-read-more" href="../blog/creative-brief-for-design-projects/index.html">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Post 11 -->
+        <article class="blog-card" data-category="print-design">
+          <a href="../blog/print-design-still-matters-local-brands/index.html" class="blog-card-image">
+            <img src="../assets/images/blog/print-design-still-matters-local-brands.svg" alt="Print design materials for a local brand">
+          </a>
+          <div class="blog-card-body">
+            <span class="blog-category">Print Design</span>
+            <h3><a href="../blog/print-design-still-matters-local-brands/index.html">Why Print Design Still Matters for Local Brands</a></h3>
+            <p>Print design remains useful for local businesses when it connects offline trust with a clean digital brand experience.</p>
+            <div class="blog-meta">
+              <span>By Mahatheer Muhammadh</span>
+              <span>2 min read</span>
+            </div>
+            <a class="blog-read-more" href="../blog/print-design-still-matters-local-brands/index.html">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Post 12 -->
+        <article class="blog-card" data-category="strategy">
+          <a href="../blog/marketing-audit-before-campaigns/index.html" class="blog-card-image">
+            <img src="../assets/images/blog/marketing-audit-before-campaigns.svg" alt="Marketing audit report before campaign planning">
+          </a>
+          <div class="blog-card-body">
+            <span class="blog-category">Strategy</span>
+            <h3><a href="../blog/marketing-audit-before-campaigns/index.html">Why You Need a Marketing Audit Before New Campaigns</a></h3>
+            <p>A marketing audit helps identify weak points, missed opportunities, and the best next move before spending more on ads or content.</p>
+            <div class="blog-meta">
+              <span>By Mahatheer Muhammadh</span>
+              <span>2 min read</span>
+            </div>
+            <a class="blog-read-more" href="../blog/marketing-audit-before-campaigns/index.html">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- No Results Fallback -->
+        <div class="no-results" id="no-results-card">
+          <h3>No articles found</h3>
+          <p>We couldn't find any articles matching your search query. Try typing something else or resetting the filters.</p>
+          <button class="btn-secondary" onclick="resetFilters()">Reset Filters</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:14px;">
+          <img class="logo-dark" src="../assets/images/qalam-logo-dark.svg" alt="Qalam Digital" height="24" style="opacity:0.9;">
+          <img class="logo-light" src="../assets/images/qalam-logo-white.svg" alt="Qalam Digital" height="24" style="opacity:0.9;">
+        </div>
+        <p>AI-powered digital marketing and creative growth agency helping brands scale through Meta Ads, SEO, branding, and full-stack creative strategy.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/qalamdigital" class="social-btn" title="Facebook" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/qalamdigital" class="social-btn" title="Instagram" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/qalamdigital" class="social-btn" title="LinkedIn" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://wa.me/919361104499" class="social-btn" title="WhatsApp" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../index.html#services">Meta Ads</a></li>
+          <li><a href="../index.html#services">Google Ads</a></li>
+          <li><a href="../index.html#services">SEO</a></li>
+          <li><a href="../index.html#services">Branding & Identity</a></li>
+          <li><a href="../index.html#services">Web Development</a></li>
+          <li><a href="../index.html#services">Social Media</a></li>
+          <li><a href="../index.html#services">Print Design</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../portfolio.html">Portfolio</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../portfolio.html#case-studies">Case Studies</a></li>
+          <li><a href="../index.html#faq">FAQ</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="contact-item">qalamdigitalsolution@gmail.com</div>
+        <div class="contact-item">+91 93611 04499</div>
+        <div class="contact-item">+91 89039 17470</div>
+        <div class="contact-item" style="margin-top:10px;">3, Commercial Complex, Near Police Station, BP Agramharam, Erode - 5</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Qalam Digital. All rights reserved. Crafted with AI x Creativity.</p>
+      <p>Privacy Policy &middot; Terms of Service</p>
+    </div>
+  </div>
+</footer>
+
+<div id="floating-cta">
+  <a href="https://wa.me/919361104499?text=Hi%20Qalam%20Digital%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." class="float-wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WA</a>
+  <button class="float-btn" onclick="openPopup()">Free Marketing Audit</button>
+</div>
+
+<div id="popup-overlay" onclick="closePopupOnBg(event)">
+  <div class="popup-card">
+    <button class="popup-close" onclick="closePopup()">&times;</button>
+    <div class="popup-title">Get Your Free Audit</div>
+    <p class="popup-sub">Fill in your details and we'll reach out within 4 hours.</p>
+    <form class="lead-form" data-form-name="Popup audit" onsubmit="handlePopupForm(event)">
+      <div class="form-row">
+        <div class="form-group"><label>Your Name</label><input type="text" name="name" placeholder="John Doe" required></div>
+        <div class="form-group"><label>Business Name</label><input type="text" name="business" placeholder="Acme Inc." required></div>
+      </div>
+      <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="you@company.com" required></div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="1234567890" required></div>
+
+      <fieldset class="form-group service-options" data-service-group>
+        <legend>Project Type</legend>
+        <div class="service-chip-grid" role="group" aria-label="Project Type">
+          <label class="service-chip">
+            <input class="service-chip-input" type="checkbox" name="services[]" value="Graphic Design">
+            <span>Graphic Design</span>
+          </label>
+          <label class="service-chip">
+            <input class="service-chip-input" type="checkbox" name="services[]" value="Landing Page Design">
+            <span>Landing Page Design</span>
+          </label>
+          <label class="service-chip">
+            <input class="service-chip-input" type="checkbox" name="services[]" value="UI UX Design">
+            <span>UI UX Design</span>
+          </label>
+          <label class="service-chip">
+            <input class="service-chip-input" type="checkbox" name="services[]" value="Social Media Management">
+            <span>Social Media Management</span>
+          </label>
+          <label class="service-chip">
+            <input class="service-chip-input" type="checkbox" name="services[]" value="Meta Ads (Facebook/Instagram)">
+            <span>Meta Ads (Facebook/Instagram)</span>
+          </label>
+          <label class="service-chip">
+            <input class="service-chip-input" type="checkbox" name="services[]" value="Google Ads">
+            <span>Google Ads</span>
+          </label>
+          <label class="service-chip">
+            <input class="service-chip-input" type="checkbox" name="services[]" value="SEO">
+            <span>SEO</span>
+          </label>
+          <label class="service-chip">
+            <input class="service-chip-input" type="checkbox" name="services[]" value="Branding &amp; Identity">
+            <span>Branding &amp; Identity</span>
+          </label>
+          <label class="service-chip">
+            <input class="service-chip-input" type="checkbox" name="services[]" value="Web Design &amp; Development">
+            <span>Web Design &amp; Development</span>
+          </label>
+          <label class="service-chip">
+            <input class="service-chip-input" type="checkbox" name="services[]" value="Print Design">
+            <span>Print Design</span>
+          </label>
+          <label class="service-chip">
+            <input class="service-chip-input" type="checkbox" name="services[]" value="Full-Stack Marketing">
+            <span>Full-Stack Marketing</span>
+          </label>
+        </div>
+        <p class="service-error" aria-live="polite">Choose at least one project type.</p>
+      </fieldset>
+      <div class="form-group"><label>How Can We Help?</label><textarea name="message" placeholder="Tell us about your business goals..."></textarea></div>
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:14px;margin-top:6px;">Send My Audit Request</button>
+    </form>
+    <p style="font-size:15px;color:rgba(255,255,255,0.3);text-align:center;margin-top:12px;">100% free.</p>
+  </div>
+</div>
+<script src="../assets/js/script.js"></script>
+
+<!-- Inline script for interactive filtering and live search -->
+<script>
+  let activeCategory = 'all';
+  let searchQuery = '';
+
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const searchInput = document.getElementById('blog-search');
+  const blogCards = document.querySelectorAll('.blog-card');
+  const ctaCard = document.getElementById('audit-cta-card');
+  const noResultsCard = document.getElementById('no-results-card');
+
+  // Add click listeners to filter buttons
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Toggle active states
+      filterButtons.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
+      activeCategory = btn.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  // Add input listener to search field
+  searchInput.addEventListener('input', (e) => {
+    searchQuery = e.target.value.toLowerCase().trim();
+    applyFilters();
+  });
+
+  // Filter application function
+  function applyFilters() {
+    let visibleCount = 0;
+
+    blogCards.forEach(card => {
+      const cardCategory = card.dataset.category;
+      
+      // Grab text contents for search indexing
+      const titleText = card.querySelector('h3').textContent.toLowerCase();
+      const descText = card.querySelector('p').textContent.toLowerCase();
+      const categoryText = card.querySelector('.blog-category').textContent.toLowerCase();
+
+      // Check category match
+      const matchesCategory = (activeCategory === 'all' || cardCategory === activeCategory);
+      
+      // Check search match
+      const matchesSearch = (searchQuery === '' || 
+                             titleText.includes(searchQuery) || 
+                             descText.includes(searchQuery) ||
+                             categoryText.includes(searchQuery));
+
+      if (matchesCategory && matchesSearch) {
+        card.classList.remove('is-filtered-out');
+        visibleCount++;
+      } else {
+        card.classList.add('is-filtered-out');
+      }
+    });
+
+    // Handle CTA card visibility
+    // Hide CTA card if a specific filter or search is active to keep layout clean, or keep it visible only for 'all' with no search
+    if (activeCategory === 'all' && searchQuery === '') {
+      ctaCard.style.display = 'flex';
+    } else {
+      ctaCard.style.display = 'none';
+    }
+
+    // Toggle no results display
+    if (visibleCount === 0) {
+      noResultsCard.classList.add('visible');
+    } else {
+      noResultsCard.classList.remove('visible');
+    }
+  }
+
+  // Reset function for no-results click
+  window.resetFilters = function() {
+    searchInput.value = '';
+    searchQuery = '';
+    
+    filterButtons.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    
+    const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+    if (allBtn) {
+      allBtn.classList.add('active');
+      allBtn.setAttribute('aria-selected', 'true');
+    }
+    
+    activeCategory = 'all';
+    applyFilters();
+  };
+</script>
+</body>
+</html>

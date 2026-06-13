@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="SEO foundations for a new business website">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1A9E57" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0891B2" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="#F5F7F5"/>
+  <rect x="54" y="54" width="1092" height="567" rx="34" fill="url(#g)"/>
+  <circle cx="1010" cy="132" r="92" fill="#fff" opacity="0.12"/>
+  <circle cx="920" cy="548" r="170" fill="#fff" opacity="0.10"/>
+  <text x="96" y="136" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#EAFBF1" letter-spacing="4">SEO</text>
+  <text x="96" y="312" font-family="Arial, sans-serif" font-size="66" font-weight="800" fill="#FFFFFF"><tspan x="96" y="312">Website SEO Foundations</tspan><tspan x="96" y="388">for a New Business</tspan></text>
+  <text x="96" y="560" font-family="Arial, sans-serif" font-size="28" fill="#EAFBF1">Qalam Digital Blog</text>
+</svg>
